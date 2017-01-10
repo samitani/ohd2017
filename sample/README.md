@@ -1,12 +1,15 @@
 
-## ¥¹¥Æ¥Ã¥Ô¥ó¥°¥â¡¼¥¿¡¼¼Â¸³
-### ÉôÉÊ
-|¥¹¥Æ¥Ã¥Ô¥ó¥°¥â¡¼¥¿|MDP-35A |http://akizukidenshi.com/catalog/g/gP-09438/|
-|¥â¡¼¥¿¥É¥é¥¤¥Ğ    |TB6674PG|http://akizukidenshi.com/download/ds/toshiba/TB6674_ja.pdf#search=%27TB6674PG%27|
-|ÅÅ¸»|Panasonic 9VÅÅÃÓ| |
+## ã‚¹ãƒ†ãƒƒãƒ”ãƒ³ã‚°ãƒ¢ãƒ¼ã‚¿ãƒ¼å®Ÿé¨“
+### éƒ¨å“
+|ç¨®é¡| å‹ç•ª | é–¢é€£è³‡æ–™ |
+|---|---|---|
+|ã‚¹ãƒ†ãƒƒãƒ”ãƒ³ã‚°ãƒ¢ãƒ¼ã‚¿ |MDP-35A |http://akizukidenshi.com/catalog/g/gP-09438/|
+|ãƒ¢ãƒ¼ã‚¿ãƒ‰ãƒ©ã‚¤ãƒ     |TB6674PG|http://akizukidenshi.com/download/ds/toshiba/TB6674_ja.pdf#search=%27TB6674PG%27|
+|é›»æº            |Panasonic 9Vé›»æ± |    |
 
-### ÇÛÀş
+### é…ç·š
 http://maplewine.up.seesaa.net/image/Arduino_BipolarStepperMoter.png
+
 http://izawa-web.com/lazarus/lazarus.html
 
-### ¥½¡¼¥¹
+### ã‚½ãƒ¼ã‚¹
