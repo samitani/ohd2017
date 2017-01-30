@@ -4,12 +4,12 @@
 |-----------------------------|----------------------|
 | ステッピングモータ SM-42BYG011 | http://akizukidenshi.com/catalog/g/gP-05372/ |
 | ギア、ボルト、六角ナット        | ウデ用のレール |
-| モータドライバ TB6674PG x 1   | [TB6674PG](http://akizukidenshi.com/download/ds/toshiba/TB6674_ja.pdf#search=%27TB6674PG%27)|
+| モータドライバ TB6674PG x 1   | ステッピングモータ用 |
 | 電池                        | Panasonic 9V電池。ステッピングモータ駆動用。|
 | Raspberry Pi 2 + Wifi アダプタ | |
-| サーボモーター SG-90 x 2      | http://akizukidenshi.com/catalog/g/gM-08761/ |
-| ステッピングモータ MDP-35A     | トルクの小さい安いモータ |
-| 小型 振動モーター              | 使う予定はなし  |
+| マイクロサーボ [SG-90 x 2](http://akizukidenshi.com/catalog/g/gM-08761/) | 何かに使うかも？ |
+| ステッピングモータ MDP-35A     | トルクの小さい安いモータ。何かに使うかも？ |
+| 小型 振動モーター              | 何かに使うかも？  |
 | ソレノイド x 1                | |
 | テスター                     | |
 | 六角レンチ各種                | |
