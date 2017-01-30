@@ -33,12 +33,13 @@
   * DCモータ用
   * https://www.sengoku.co.jp/mod/sgk_cart/detail.php?code=EEHD-4RAW
 * DCモータ
+* DCモータードライバ
 
 * ウデ用の板
 * ウデ用のレール
   * アルミチャンネル？
 * ウデ用の角材
-* ゴム
+* ゴム/模型用ゴムタイヤ?
 * ピン用の木材(4mm?)
 
 ## 設計
