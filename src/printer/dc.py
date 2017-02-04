@@ -27,13 +27,15 @@ class DCMotor:
 
         self.position_pins = array_pins
 
-    def push(self):
+    def push(self, t):
         GPIO.output(self.IN_1A4A, False)
         GPIO.output(self.IN_2A3A, True)
 
         for i, flag in enumerate(self.position_pins):
             if (flag == 1):
                 GPIO.output(self._enable_pins[i], True)
+
+        time.sleep(t)
 
     def stop(self):
         GPIO.output(self.IN_1A4A, False)
@@ -42,7 +44,7 @@ class DCMotor:
         for p in self._enable_pins:
             GPIO.output(p, False)
 
-    def back(self):
+    def back(self, t):
         GPIO.output(self.IN_1A4A, True)
         GPIO.output(self.IN_2A3A, False)
 
@@ -50,4 +52,5 @@ class DCMotor:
             if (flag == 1):
                 GPIO.output(self._enable_pins[i], True)
 
+        time.sleep(t)
 

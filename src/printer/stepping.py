@@ -44,6 +44,7 @@ class SteppingMotor:
 
     def turn_off(self):
         GPIO.output(self.PINSTB, False)
+        GPIO.cleanup()
 
     def backward(self):
         for j in range(50):
