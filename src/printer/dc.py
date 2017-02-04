@@ -22,7 +22,6 @@ class DCMotor:
 
     def setposition(self, array_pins):
         if len(array_pins) != len(self._enable_pins):
-            pass
             raise Exception("invalid args")
 
         self.position_pins = array_pins
@@ -34,6 +33,8 @@ class DCMotor:
         for i, flag in enumerate(self.position_pins):
             if (flag == 1):
                 GPIO.output(self._enable_pins[i], True)
+            else:
+                GPIO.output(self._enable_pins[i], False)
 
         time.sleep(t)
 
@@ -51,6 +52,8 @@ class DCMotor:
         for i, flag in enumerate(self.position_pins):
             if (flag == 1):
                 GPIO.output(self._enable_pins[i], True)
+            else:
+                GPIO.output(self._enable_pins[i], False)
 
         time.sleep(t)
 
