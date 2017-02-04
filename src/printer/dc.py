@@ -5,7 +5,7 @@ import time
 import RPi.GPIO as GPIO
 
 class DCMotor:
-    _enable_pins = [4, 17]
+    _enable_pins = [4, 17, 27, 22, 10, 9, 11, 5, 6, 13]
     position_pins = []
 
     IN_1A4A = 2
@@ -21,9 +21,12 @@ class DCMotor:
             GPIO.output(p, False)
 
     def setposition(self, array_pins):
+        if len(array_pins) != len(self._enable_pins):
+            raise Exception("invalid args")
+
         self.position_pins = array_pins
 
-    def turn_right(self):
+    def push(self):
         GPIO.output(self.IN_1A4A, False)
         GPIO.output(self.IN_2A3A, True)
 
@@ -38,7 +41,7 @@ class DCMotor:
         for p in self._enable_pins:
             GPIO.output(p, False)
 
-    def turn_left(self):
+    def back(self):
         GPIO.output(self.IN_1A4A, True)
         GPIO.output(self.IN_2A3A, False)
 
@@ -47,13 +50,3 @@ class DCMotor:
                 GPIO.output(self._enable_pins[i], True)
 
 
-
-#m = DCMotor()
-#m.setposition([0, 1])
-#m.turn_right()
-#time.sleep(1)
-#m.stop()
-#time.sleep(1)
-#m.turn_left()
-#time.sleep(1)
-#m.stop()
