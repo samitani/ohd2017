@@ -7,7 +7,11 @@ import RPi.GPIO as GPIO
 from dc import DCMotor
 
 m = DCMotor()
-m.setposition([1, 0, 0, 0, 0, 0, 0, 0 ,0 ,0])
+m.setposition([1, 1, 1, 1, 1, 1, 1, 1 ,1 , 1])
+m.back()
+time.sleep(1)
 m.push()
-time.sleep(3)
+time.sleep(5)
+m.back()
+time.sleep(5)
 m.stop()

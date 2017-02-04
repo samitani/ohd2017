@@ -5,7 +5,7 @@ import time
 import RPi.GPIO as GPIO
 
 class DCMotor:
-    _enable_pins = [4, 17, 27, 22, 10, 9, 11, 5, 6, 13]
+    _enable_pins = [4, 27, 10, 11, 6, 17, 22, 9, 5, 13]
     position_pins = []
 
     IN_1A4A = 2
@@ -22,6 +22,7 @@ class DCMotor:
 
     def setposition(self, array_pins):
         if len(array_pins) != len(self._enable_pins):
+            pass
             raise Exception("invalid args")
 
         self.position_pins = array_pins
