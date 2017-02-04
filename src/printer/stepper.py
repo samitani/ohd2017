@@ -48,9 +48,8 @@ GPIO.setup(stb_pin,GPIO.OUT)
 GPIO.output(stb_pin, True)
 
 try:
-    for i in range(0,15):
+    for i in range(0,PANEL_HORIZONTAL_HOLES):
         for j in range(50):
-
             print "pin1: false, pin2: false"
             GPIO.output(step_pin1, False)
             GPIO.output(step_pin2, False)
@@ -70,7 +69,11 @@ try:
 
         time.sleep(3)
         total_cycles = total_cycles + 1
+
+        # push bars
+
         print "NEXT LINE"
+
         if (intr_flag):
             raise Exception
 

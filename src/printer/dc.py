@@ -4,27 +4,56 @@ import sys
 import time
 import RPi.GPIO as GPIO
 
-GPIO.setmode(GPIO.BCM)
+class DCMotor:
+    _enable_pins = [4, 17]
+    position_pins = []
 
-enable_pin = 11
-in1A = 7
-in2A = 8
+    IN_1A4A = 2
+    IN_2A3A = 3
+    
+    def __init__(self):
+        GPIO.setmode(GPIO.BCM)
+        GPIO.setup(self.IN_1A4A, GPIO.OUT)
+        GPIO.setup(self.IN_2A3A, GPIO.OUT)
 
-GPIO.setup(enable_pin,GPIO.OUT)
-GPIO.setup(in1A,GPIO.OUT)
-GPIO.setup(in2A,GPIO.OUT)
+        for p in self._enable_pins:
+            GPIO.setup(p, GPIO.OUT)
+            GPIO.output(p, False)
+
+    def setposition(self, array_pins):
+        self.position_pins = array_pins
+
+    def turn_right(self):
+        GPIO.output(self.IN_1A4A, False)
+        GPIO.output(self.IN_2A3A, True)
+
+        for i, flag in enumerate(self.position_pins):
+            if (flag == 1):
+                GPIO.output(self._enable_pins[i], True)
+
+    def stop(self):
+        GPIO.output(self.IN_1A4A, False)
+        GPIO.output(self.IN_2A3A, False)
+
+        for p in self._enable_pins:
+            GPIO.output(p, False)
+
+    def turn_left(self):
+        GPIO.output(self.IN_1A4A, True)
+        GPIO.output(self.IN_2A3A, False)
+
+        for i, flag in enumerate(self.position_pins):
+            if (flag == 1):
+                GPIO.output(self._enable_pins[i], True)
 
 
-GPIO.output(enable_pin, False)
 
-GPIO.output(in1A, True)
-GPIO.output(in2A, False)
-GPIO.output(enable_pin, True)
+m = DCMotor()
+m.setposition([0, 1])
+m.turn_right()
 time.sleep(1)
-GPIO.output(enable_pin, False)
+m.stop()
 time.sleep(1)
-GPIO.output(in1A, False)
-GPIO.output(in2A, True)
-GPIO.output(enable_pin, True)
+m.turn_left()
 time.sleep(1)
-GPIO.output(enable_pin, False)
+m.stop()
