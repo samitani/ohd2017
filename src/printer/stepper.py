@@ -4,6 +4,7 @@ import sys
 import time
 import signal
 import RPi.GPIO as GPIO
+from dc import DCMotor
 
 #################################
 # 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 #
@@ -38,6 +39,7 @@ def exit_handler(signal, frame):
 
 signal.signal(signal.SIGINT, exit_handler)
 
+dcm = DCMotor()
 
 GPIO.setmode(GPIO.BCM)
 
@@ -70,6 +72,10 @@ try:
         time.sleep(3)
         total_cycles = total_cycles + 1
 
+        dcm.setposition([0, 1])
+        dcm.turn_right()
+        time.sleep(1)
+        dcm.stop()
         # push bars
 
         print "NEXT LINE"

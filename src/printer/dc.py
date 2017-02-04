@@ -48,12 +48,12 @@ class DCMotor:
 
 
 
-m = DCMotor()
-m.setposition([0, 1])
-m.turn_right()
-time.sleep(1)
-m.stop()
-time.sleep(1)
-m.turn_left()
-time.sleep(1)
-m.stop()
+#m = DCMotor()
+#m.setposition([0, 1])
+#m.turn_right()
+#time.sleep(1)
+#m.stop()
+#time.sleep(1)
+#m.turn_left()
+#time.sleep(1)
+#m.stop()
