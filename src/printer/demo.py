@@ -22,28 +22,6 @@ from dc import DCMotor
 #################################
 
 
-class PPAPAPIWatcher:
-    API_HOST = 'yhack-ppap17.mybluemix.net'
-    API_ENTRY_POINT = '/api/ppapcode'
-    callback = ''
-
-    def __init__(self, cb):
-        self.callback = cb
-
-    def run(self):
-        while True:
-            time.sleep(0.3)
-            print "INFO: HTTP get..."
-            response = urllib2.urlopen('http://' + self.API_HOST + self.API_ENTRY_POINT)
-            body = response.read()
-
-            print body
-            jsondata = json.loads(body)
-
-            if 'ppapcode' in jsondata and jsondata['ppapcode']:
-                self.callback(list(jsondata['ppapcode']))
-
-
 intr_flag = 0
 
 def printout(data):
@@ -63,7 +41,7 @@ def printout(data):
             for j in range(CYCLES_PER_HOLE):
                 stp.forward() 
                 total_cycles = total_cycles + 1
-   
+
                 if (intr_flag):
                     break
 
@@ -96,6 +74,9 @@ def exit_handler(signal, frame):
      intr_flag = 1
 
 
-watcher = PPAPAPIWatcher(printout)
-watcher.run()
+
+printout(list("000000000000000000000000000000011000000001110000000011100000000111000000011111110001111111001110000011110000000110000000000000000000000000000000000000"))
+printout([1, 1, 1, 1, 1, 1, 1, 1, 1, 1])
+#ar = list("1010101010")
+#printout(ar)
 
