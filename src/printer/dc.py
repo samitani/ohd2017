@@ -32,13 +32,41 @@ class DCMotor:
         GPIO.output(self.IN_1A4A, False)
         GPIO.output(self.IN_2A3A, True)
 
-        for i, flag in enumerate(self.position_pins):
-            if (flag == 1):
+        for i in range(len(self.position_pins)):
+            if (i < 3 and self.position_pins[i] == 1):
                 GPIO.output(self._enable_pins[i], True)
             else:
                 GPIO.output(self._enable_pins[i], False)
 
         time.sleep(t)
+
+        for i in range(len(self.position_pins)):
+            if (i >= 3 and i < 6 and self.position_pins[i] == 1):
+                print self._enable_pins[i]
+                GPIO.output(self._enable_pins[i], True)
+            else:
+                GPIO.output(self._enable_pins[i], False)
+
+        time.sleep(t)
+
+        for i in range(len(self.position_pins)):
+            if (i >= 6 and i < 9 and self.position_pins[i] == 1):
+                GPIO.output(self._enable_pins[i], True)
+            else:
+                GPIO.output(self._enable_pins[i], False)
+
+        time.sleep(t)
+
+        for i in range(len(self.position_pins)):
+            if (i == 9 and self.position_pins[i] == 1):
+                GPIO.output(self._enable_pins[i], True)
+            else:
+                GPIO.output(self._enable_pins[i], False)
+
+        time.sleep(t)
+
+
+
 
     def stop(self):
         GPIO.output(self.IN_1A4A, False)
@@ -52,12 +80,37 @@ class DCMotor:
         GPIO.output(self.IN_1A4A, True)
         GPIO.output(self.IN_2A3A, False)
 
-        for i, flag in enumerate(self.position_pins):
-            if (flag == 1):
-                print self._enable_pins[i]
+        for i in range(len(self.position_pins)):
+            if (i < 3 and self.position_pins[i] == 1):
                 GPIO.output(self._enable_pins[i], True)
             else:
                 GPIO.output(self._enable_pins[i], False)
 
         time.sleep(t)
+
+        for i in range(len(self.position_pins)):
+            if (i >= 3 and i < 6 and self.position_pins[i] == 1):
+                GPIO.output(self._enable_pins[i], True)
+            else:
+                GPIO.output(self._enable_pins[i], False)
+
+        time.sleep(t)
+
+        for i in range(len(self.position_pins)):
+            if (i >= 6 and i < 9 and self.position_pins[i] == 1):
+                GPIO.output(self._enable_pins[i], True)
+            else:
+                GPIO.output(self._enable_pins[i], False)
+
+        time.sleep(t)
+
+        for i in range(len(self.position_pins)):
+            if (i == 9 and self.position_pins[i] == 1):
+                GPIO.output(self._enable_pins[i], True)
+            else:
+                GPIO.output(self._enable_pins[i], False)
+
+        time.sleep(t)
+
+
 
