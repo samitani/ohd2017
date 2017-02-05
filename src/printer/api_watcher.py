@@ -50,7 +50,7 @@ def printout(data):
     signal.signal(signal.SIGINT, exit_handler)
     global intr_flag
 
-    PANEL_HORIZONTAL_HOLES = 15
+    PANEL_HORIZONTAL_HOLES = 13
     PANEL_VERTICAL_HOLES   = 10
 
     total_cycles = 0
