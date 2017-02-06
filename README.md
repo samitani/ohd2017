@@ -6,6 +6,7 @@
 ![PPAP](https://github.com/samitani/ohd2017/raw/master/logo.png "PPAP")
 
 * iPad で描いた絵をピンアートとして出力します
+* リモートから絵をプレゼントできます
 
 [![Alt text for your video](http://img.youtube.com/vi/EOE0tW7oABs/0.jpg)](https://www.youtube.com/embed/EOE0tW7oABs)
 
