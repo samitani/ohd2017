@@ -8,7 +8,7 @@ from dc import DCMotor
 
 m = DCMotor()
 
-d = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+d = ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
 
 m.stop()
 for i in range(10):
