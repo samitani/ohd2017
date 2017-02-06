@@ -1,51 +1,23 @@
 
-## 持ってくもの
+# PPAP is Programmable Art of Pin
+
+## PPAP とは
+
+[![Alt text for your video](http://img.youtube.com/vi/EOE0tW7oABs/0.jpg)](https://www.youtube.com/embed/EOE0tW7oABs)
+
+
+## 部品
+
 |モノ                          |     説明             |
 |-----------------------------|----------------------|
-| ステッピングモータ SM-42BYG011 | http://akizukidenshi.com/catalog/g/gP-05372/ |
+| ステッピングモータ [SM-42BYG011](http://akizukidenshi.com/catalog/g/gP-05372/) | ウデを左右に移動するためのモーター |
 | ギア、ボルト、六角ナット        | ウデ用のレール |
 | モータドライバ TB6674PG x 1   | ステッピングモータ用 |
-| 電池                        | Panasonic 9V電池。ステッピングモータ駆動用。|
+| DCモータ x 10               |
+| モータドライバ x 5            |
 | Raspberry Pi 2 + Wifi アダプタ | |
-| マイクロサーボ [SG-90 x 2](http://akizukidenshi.com/catalog/g/gM-08761/) | 何かに使うかも？ |
-| ステッピングモータ MDP-35A     | トルクの小さい安いモータ。何かに使うかも？ |
-| 小型 振動モーター              | 何かに使うかも？  |
-| ソレノイド x 1                | |
-| テスター                     | |
-| 六角レンチ各種                | |
-| 精密ドライバー                | |
-| ガムテ・ビニテ                | |
-| ゴム用 ボンド                 | |
-| 工作用 ボンド                 | 普通の透明なやつ |
-| ネジ、釘                     | |
-| ハンマー                     | |
-| パイプカッター                | アルミパイプぐらいなら切断可能 |
-| 紙やすり                     | |
-| Hackey                     | 失敗した時の保険・・・ |
-| モバイルバッテリー            | |
-| グルーガン                   | 百円均一のやつ |
-| ダンボール | 何かと加工に便利そうなので・・・ |
-| 木材                        | いらないカラーボックスの棚板。 |
-| Black & Decker マルチツール   | 電動ドリル、電動サンダー、丸のこ | 
-| 電源タップ | |
 
-## 買うもの
-* ブレッドボードにUSBから5V供給するやつ
-  * DCモータ用
-  * https://www.sengoku.co.jp/mod/sgk_cart/detail.php?code=EEHD-4RAW
-* DCモータ
-* DCモータードライバ
 
-* 軍手
-* ウデ用の板
-* ウデ用のレール
-  * アルミチャンネル？
-* ウデ用の角材
-* ゴム/模型用ゴムタイヤ?
-* ピン用の木材(4mm?)
-
-## 設計
-### ステッピングモータ ドライバの配線
-http://maplewine.up.seesaa.net/image/Arduino_BipolarStepperMoter.png
-
-http://izawa-web.com/lazarus/lazarus.html
+## 参考資料
+* http://maplewine.up.seesaa.net/image/Arduino_BipolarStepperMoter.png
+* http://izawa-web.com/lazarus/lazarus.html
